@@ -16,7 +16,7 @@ const Banner = () => {
     </div>
     </div> 
     <div id="slide2" className="carousel-item relative w-full mt-4">
-        <img src={bannerImg2} className="w-full rounded-lg h-[700px]" />
+        <img src={bannerImg2} className="w-full rounded-lg" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide1" className="btn btn-circle btn-outline btn-accent">❮</a> 
       <a href="#slide3" className="btn btn-circle btn-outline btn-accent">❯</a>

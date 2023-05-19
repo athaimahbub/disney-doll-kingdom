@@ -3,7 +3,7 @@ import Banner from '../Component/Banner/Banner';
 import Gallery from '../Component/Gallery/Gallery';
 import Category from '../Component/Category/Category';
 import ReleasedDoll from '../Component/ReleasedDoll/ReleasedDoll';
-import DollBlog from '../Component/DollBlog/DollBlog';
+import AudienceReview from '../Component/AudienceReview/AudienceReview';
 
 
 const Home = () => {
@@ -13,7 +13,8 @@ const Home = () => {
             <Gallery></Gallery>
             <Category></Category>
             <ReleasedDoll></ReleasedDoll>
-            <DollBlog></DollBlog>
+            <AudienceReview></AudienceReview>
+            
         </div>
     );
 };

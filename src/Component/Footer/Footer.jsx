@@ -10,7 +10,7 @@ const Footer = () => {
             <img src={logo} alt='Logo Loading Problem...'></img>
             <p className='text-blue-800'>123 Main Street, AnyTown, Bangladesh. <br/>Phone: (+088) 123-4567
                <br/> Email: info@disneydollskingdom.com
-               <br/> <span className='font-bold'>Copyright © 2023 - All right reserved by DisneyToy Industries Ltd.</span>
+               <br/><br/> <span className='font-bold'>Copyright © 2023 - All right reserved by DisneyToy Industries Ltd.</span>
             </p>
            
         </div> 

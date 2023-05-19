@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/images/logo1.jpg'
+import logo from '../../assets/images/logo1.jpg';
+import { UserIcon } from '@heroicons/react/24/solid'
 
 const Header = () => {
     const headerItems = <>
-        <li className='text-blue-600 font-bold'><Link>Home</Link></li>
-        <li className='text-blue-600 font-bold'><Link>All Toys</Link></li>
-        <li className='text-blue-600 font-bold'><Link>My Toys</Link></li>
-        <li className='text-blue-600 font-bold'><Link>Add a Toy</Link></li>
-        <li className='text-blue-600 font-bold'><Link>Blogs</Link></li> 
+        <li className='text-blue-800 font-bold'><Link>Home</Link></li>
+        <li className='text-blue-800 font-bold'><Link>All Toys</Link></li>
+        <li className='text-blue-800 font-bold'><Link>My Toys</Link></li>
+        <li className='text-blue-800 font-bold'><Link>Add a Toy</Link></li>
+        <li className='text-blue-800 font-bold'><Link>Blogs</Link></li> 
     </>
     return (
         <div className="navbar bg-base-100">
@@ -32,10 +33,11 @@ const Header = () => {
   <div className="navbar-end">
      <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          {/* <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" /> */}
+          <UserIcon className="h-10 w-8 text-gray-500" />
         </div>
       </label>
-    <Link className="btn btn-sm btn-active btn-primary text-white">Login</Link>
+    <Link className="btn btn-sm btn-primary text-white">Login</Link>
   </div>
 </div>
     );

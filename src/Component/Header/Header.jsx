@@ -17,9 +17,9 @@ const Header = () => {
     const headerItems = <>
         <li className='text-blue-800 font-bold'><Link to="/">Home</Link></li>
         <li className='text-blue-800 font-bold'><Link to="/allToys">All Toys</Link></li>
-        <li className='text-blue-800 font-bold'><Link to="/myToys">My Toys</Link></li>
-        <li className='text-blue-800 font-bold'><Link to="/addToy">Add a Toy</Link></li>
-        <li className='text-blue-800 font-bold'><Link to="/blogs">Blogs</Link></li> 
+        {user && <li className='text-blue-800 font-bold'><Link to="/myToys">My Toys</Link></li>}
+        {user && <li className='text-blue-800 font-bold'><Link to="/addToy">Add a Toy</Link></li>}
+        <li className='text-blue-800 font-bold'><Link to="/blogs">Blogs</Link></li>
     </>
     return (
         <div className="navbar bg-base-100">

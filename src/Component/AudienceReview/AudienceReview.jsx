@@ -8,7 +8,7 @@ const AudienceReview = () => {
         <div className='my-12'>
             <h2 className='text-center mb-8 text-4xl text-blue-800 font-bold'>Audience Review</h2>
             <div className="container mx-auto mt-8">
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="card w-96 bg-base-100 shadow-xl border-solid border-2 border-gray-400 rounded">
               
               <div className="card-body   ">

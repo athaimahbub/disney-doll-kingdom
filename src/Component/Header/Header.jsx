@@ -37,7 +37,7 @@ const Header = () => {
           <UserIcon className="h-10 w-8 text-gray-500" />
         </div>
       </label>
-    <Link className="btn btn-sm btn-primary text-white">Login</Link>
+    <Link to='/login' className="btn btn-sm btn-primary text-white">Login</Link>
   </div>
 </div>
     );

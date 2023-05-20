@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo1.jpg';
 import { UserIcon } from '@heroicons/react/24/solid'
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Header = () => {
+
+  const {user , logOut} = useContext(AuthContext);
+
+  const handleLogOut = () => {
+     logOut()
+     .then(() => {})
+     .catch(error => console.error(error))
+  }
+
     const headerItems = <>
         <li className='text-blue-800 font-bold'><Link to="/">Home</Link></li>
         <li className='text-blue-800 font-bold'><Link to="/allToys">All Toys</Link></li>
@@ -31,13 +41,22 @@ const Header = () => {
   </div>
   
   <div className="navbar-end">
-     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          {/* <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" /> */}
-          <UserIcon className="h-10 w-8 text-gray-500" />
-        </div>
-      </label>
-    <Link to='/login' className="btn btn-sm btn-primary text-white">Login</Link>
+     
+    {user ? <>  
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
+                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" /> 
+              </div>
+              </label>
+                <Link to='/' className="btn btn-sm btn-primary text-white" onClick={handleLogOut}>Logout</Link>
+           </>  : <>
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+             <div className="w-10 rounded-full">
+                <UserIcon  className="h-10 w-8 text-gray-500" />
+            </div>
+            </label>
+           <Link to='/login' className="btn btn-sm btn-primary text-white">Login</Link>
+           </>}
   </div>
 </div>
     );

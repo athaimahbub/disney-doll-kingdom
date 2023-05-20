@@ -7,6 +7,7 @@ import Registration from "../Layout/Registration";
 import PrivateRoutes from "./PrivateRoutes";
 import AddToy from "../Layout/AddToy";
 import MyToy from "../Layout/MyToy";
+import NotFoundPage from "../Component/NotFoundPage";
 
 const router = createBrowserRouter([
     {
@@ -36,9 +37,16 @@ const router = createBrowserRouter([
         {
           path:'myToys',
           element:<PrivateRoutes> <MyToy></MyToy> </PrivateRoutes>
-        }
+        },
+
+
+        
       ]
     },
+    {
+      path:'*',
+      element:<NotFoundPage></NotFoundPage>
+    }
   ]);
 
 export default router;

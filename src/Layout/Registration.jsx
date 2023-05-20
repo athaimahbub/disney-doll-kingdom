@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const Registration = () => {
-
-    const handleLogin = event => {
+   const {createUser} = useContext(AuthContext);
+    const handleRegistration = event => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
@@ -11,12 +12,14 @@ const Registration = () => {
         const password = form.password.value;
         const photoUrl = form.photo.value;
         console.log(name, email, password,photoUrl)
-        // signIn(email, password)
-        //     .then(result => {
-        //         const user = result.user;
-        //         console.log(user);
-        //     })
-        //     .catch(error => console.log(error));
+
+        createUser(email,password)
+        .then(result => {
+            const user = result.user;
+            console.log(user)
+        })
+        .catch(error => console.log(error))
+
     }
     return (
         <div>
@@ -27,7 +30,7 @@ const Registration = () => {
            <div className="card-body">
        
                  <h2 className='text-center text-2xl text-blue-800 font-bold'>Sign up</h2>
-            <form onSubmit={handleLogin}>
+            <form onSubmit={handleRegistration}>
             <div className="form-control">
                 <label className="label">
                     <span className="label-text">Name</span>

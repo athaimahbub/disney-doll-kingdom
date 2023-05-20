@@ -1,19 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const Login = () => {
+
+    const {signIn} = useContext(AuthContext);
+
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(name, email, password)
-        // signIn(email, password)
-        //     .then(result => {
-        //         const user = result.user;
-        //         console.log(user);
-        //     })
-        //     .catch(error => console.log(error));
+        console.log( email, password)
+
+
+        signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => console.log(error));
     }
     return (
     <div>       
@@ -42,7 +48,7 @@ const Login = () => {
             </div>
         </form>
 
-        <p className='my-4 text-center'>New to Disney Doll? <Link className='text-blue-600 font-bold' to="/registration">Sign Up</Link> </p>
+        <p className='my-4 text-center'>New to Disney Doll Kingdom? <Link className='text-blue-600 font-bold' to="/registration">Sign Up</Link> </p>
         
         </div>
      </div>

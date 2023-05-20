@@ -14,7 +14,7 @@ const Gallery = () => {
         <div className="container mx-auto mt-8">
             <h2 className='text-center mb-8 text-4xl text-blue-800 font-bold'>Disney Doll Kingdom Gallery</h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
           {/* Photo items will be added here */}
           <div className="w-full h-48 md:h-auto md:aspect-w-1 md:aspect-h-1 border-solid border-2 border-blue-400 rounded ">
              <img src={galleryImg1} className="w-full rounded-lg" />  

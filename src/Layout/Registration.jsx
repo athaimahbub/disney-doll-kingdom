@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Login = () => {
+const Registration = () => {
+
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
@@ -16,14 +17,14 @@ const Login = () => {
         //     .catch(error => console.log(error));
     }
     return (
-    <div>       
-        <div className="hero min-h-screen bg-base-200">
+        <div>
+                 <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse">
     
            <div className="card  w-full max-w-sm shadow-2xl bg-base-100">
            <div className="card-body">
        
-                 <h2 className='text-center text-2xl text-blue-800 font-bold'>Log in</h2>
+                 <h2 className='text-center text-2xl text-blue-800 font-bold'>Sign up</h2>
             <form onSubmit={handleLogin}>
                 <div className="form-control">
                 <label className="label">
@@ -42,14 +43,14 @@ const Login = () => {
             </div>
         </form>
 
-        <p className='my-4 text-center'>New to Disney Doll <Link className='text-blue-600 font-bold' to="/registration">Sign Up</Link> </p>
+        <p className='my-4 text-center'>New to Disney Doll <Link className='text-blue-600 font-bold' to='/login'>Login</Link> </p>
         
         </div>
      </div>
       </div>
      </div>
-    </div>
+        </div>
     );
 };
 
-export default Login;
+export default Registration;

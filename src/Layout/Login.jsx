@@ -42,7 +42,7 @@ const Login = () => {
             </div>
         </form>
 
-        <p className='my-4 text-center'>New to Disney Doll <Link className='text-blue-600 font-bold' to="/registration">Sign Up</Link> </p>
+        <p className='my-4 text-center'>New to Disney Doll? <Link className='text-blue-600 font-bold' to="/registration">Sign Up</Link> </p>
         
         </div>
      </div>

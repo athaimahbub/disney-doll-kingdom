@@ -7,22 +7,22 @@ import { Link } from 'react-router-dom';
 const Category = () => {
     const categories = [
         {
-          name: 'Category 1',
+          name:' Disney Princess',
           subCategories: [
             {
-              name: 'Subcategory 1',
+              name: 'Belle',
               toys: [
                 {
                   id: 1,
-                  picture: 'toy1.jpg',
-                  name: 'Toy 1',
+                  picture: 'https://i.ibb.co/vZx1M4L/p4.jpg',
+                  name: 'Belle',
                   price: 9.99,
                   rating: 4.5
                 },
                 {
                   id: 2,
-                  picture: 'toy2.jpg',
-                  name: 'Toy 2',
+                  picture: 'https://i.ibb.co/6F0YmrX/p5.jpg',
+                  name: 'Cindrella',
                   price: 14.99,
                   rating: 3.8
                 },
@@ -34,22 +34,22 @@ const Category = () => {
         },
         // More categories...
         {
-            name: 'Category 2',
+            name: 'Frozen',
             subCategories: [
               {
-                name: 'Subcategory 1',
+                name: 'Princess Ela',
                 toys: [
                   {
                     id: 1,
-                    picture: 'toy1.jpg',
-                    name: 'Toy 1',
+                    picture: 'https://i.ibb.co/6F0YmrX/p5.jpg',
+                    name: 'Cindrella',
                     price: 9.99,
                     rating: 4
                   },
                   {
                     id: 2,
-                    picture: 'toy2.jpg',
-                    name: 'Toy 2',
+                    picture: 'https://i.ibb.co/vZx1M4L/p4.jpg',
+                    name: 'Belle',
                     price: 14.99,
                     rating: 3.8
                   },
@@ -60,22 +60,22 @@ const Category = () => {
             ]
           },
           {
-            name: 'Category 3',
+            name: 'Donal Duck',
             subCategories: [
               {
-                name: 'Subcategory 1',
+                name: 'Duck',
                 toys: [
                   {
                     id: 1,
-                    picture: 'toy1.jpg',
-                    name: 'Toy 1',
+                    picture: 'https://i.ibb.co/kMNJmbD/p6.jpg',
+                    name: 'Duck',
                     price: 9.99,
                     rating: 4.5
                   },
                   {
                     id: 2,
-                    picture: 'toy2.jpg',
-                    name: 'Toy 2',
+                    picture: 'https://i.ibb.co/vZx1M4L/p4.jpg',
+                    name: 'Belle',
                     price: 14.99,
                     rating: 3.8
                   },
@@ -102,12 +102,12 @@ const Category = () => {
         <TabPanel key={category.name} className=' text-blue-600 font-bold mt-8'>
           {category.subCategories.map(subCategory => (
             <div key={subCategory.name}>
-              <h3>{subCategory.name}</h3>
+              {/* <h3>{subCategory.name}</h3> */}
               <div className="container mx-auto mt-4">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {subCategory.toys.map(toy => (
                   <div className="card w-96 bg-base-100 shadow-xl">
-                  <figure><img src={galleryImg1} alt={toy.name} /></figure>
+                  <figure><img src={toy.picture} alt={toy.name} /></figure>
                   <div className="card-body items-center text-center">
                     <h2 className="card-title">{toy.name}</h2>
                     <p>Price: ${toy.price}</p>

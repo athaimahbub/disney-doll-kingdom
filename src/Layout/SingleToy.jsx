@@ -1,6 +1,6 @@
 
 import { useLoaderData } from 'react-router-dom';
-import logo from '../assets/images/logo.jpg'
+
 
 const SingleToy = () => {
     const toy = useLoaderData();

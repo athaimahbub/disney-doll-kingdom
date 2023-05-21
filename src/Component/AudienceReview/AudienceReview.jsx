@@ -17,7 +17,7 @@ const AudienceReview = () => {
             <h2 className='text-center mb-8 text-4xl text-blue-800 font-bold'>Audience Review</h2>
             <div className="container mx-auto mt-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="card w-96 bg-base-100 shadow-xl border-solid border-2 border-gray-400 rounded" data-aos="fade-right" data-aos-easing="ease-out-cubic"
+              <div className="card w-96 bg-base-100 shadow-xl border-solid border-2 border-gray-400 rounded" data-aos="zoom-in-right" data-aos-easing="ease-out-cubic"
      data-aos-duration="1000">
               
               <div className="card-body   ">

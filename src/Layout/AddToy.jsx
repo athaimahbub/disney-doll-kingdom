@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
+import { useLoaderData } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const AddToy = () => {
-    // const toy = useLoaderData();
-    // const {toy_name, _id} = toy
+    
     const {user} = useContext(AuthContext);
 
     const handleAddToy = event => {
@@ -34,7 +35,12 @@ const AddToy = () => {
         .then(data => {
             console.log(data);
             if(data.insertedId){
-                alert('Toy added successfully');
+                // alert('Toy added successfully');
+                Swal.fire({
+                    icon: 'success',
+                    title: 'You new toy has added successfully',
+                        
+                })
             }
         })
     }

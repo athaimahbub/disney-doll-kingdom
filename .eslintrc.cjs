@@ -16,5 +16,6 @@ module.exports = {
     'react/jsx-key': 'off',
     'react/no-unescaped-entities': 'off',
     'react/prop-types': "off",
+    'react-hooks/exhaustive-deps': 'off',
   },
 }

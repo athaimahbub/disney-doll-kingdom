@@ -61,7 +61,7 @@ const Login = () => {
             <div className="form-control mt-6 flex">
                  <input className="btn btn-primary" type="submit" value="Login" />
 
-                 <button className='btn btn-sm btn-outline btn-primary my-2 mx-16' onClick={handleGoogleSignIn}>Google Sign-in</button>
+                 <button className='btn btn-sm btn-outline btn-primary my-2 mx-16' onClick={handleGoogleSignIn}>Sign in with Google</button>
             </div>
 
             {/* <button className='btn btn-sm btn-outline btn-primary my-2 mx-16' onClick={handleGoogleSignIn}>Google Sign-in</button> */}

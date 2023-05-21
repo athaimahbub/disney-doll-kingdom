@@ -18,6 +18,14 @@ const SingleToy = () => {
                <p >Price:  {price}</p>
                <p >Quantity:  {quantity}</p>
                <p>Rating:  {rating}</p>
+               <div className="rating">
+                <input type="radio" name="rating-2" className="mask mask-star-2 bg-blue-600" />
+                <input type="radio" name="rating-2" className="mask mask-star-2 bg-blue-600" checked />
+                <input type="radio" name="rating-2" className="mask mask-star-2 bg-blue-600" />
+                 <input type="radio" name="rating-2" className="mask mask-star-2 bg-blue-600" />
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-blue-600" />
+              
+                </div>
             </div>
         </div>
        </div>

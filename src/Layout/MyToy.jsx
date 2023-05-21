@@ -8,7 +8,9 @@ const MyToy = () => {
     const {user} = useContext(AuthContext);
     const [myToys , setMyToys] = useState([]);
 
-    const url = `http://localhost:5000/addToy?email=${user.email}`
+    // `http://localhost:5000/addToy?email=${user.email}`
+
+    const url = `https://capable-worm-production.up.railway.app/addToy?email=${user.email}`
     useEffect(() =>{
         fetch(url)
         .then(res => res.json())
@@ -28,7 +30,7 @@ const MyToy = () => {
             
           });
         if(permission){
-            fetch(`http://localhost:5000/addToy/${user.email}/${id}`,{
+            fetch(`http://localhost:5000/addToy/${id}`,{
                 method: 'DELETE'
             })
             .then(res => res.json())
@@ -50,7 +52,15 @@ const MyToy = () => {
 
     // Confirm 
     const handleConfirm = id => {
-        fetch(`http://localhost:5000/addToy/${user.email}/${id}`,{
+
+      const permission = Swal.fire({
+        icon: 'success',
+        title: 'Click Ok to confirm',
+        
+      });
+
+        if(permission){
+          fetch(`http://localhost:5000/addToy/${id}`,{
             method: 'PATCH',
             header: {
                 'content-type' : 'application/json'
@@ -62,8 +72,14 @@ const MyToy = () => {
             console.log(data);
             if(data.modifiedCount > 0){
                 //  
+                const remaining = myToys.filter(myToy => myToy._id !== id);
+                const updated = myToys.find(myToy => myToy._id === id);
+                updated.status = 'confirm'
+                const newToys = [updated, ...remaining];
+                setMyToys(newToys);
             }
         })
+        }
     }
      
 

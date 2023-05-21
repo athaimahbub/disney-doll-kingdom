@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
-import { useLoaderData } from 'react-router-dom';
+
 import Swal from 'sweetalert2';
 
 const AddToy = () => {
@@ -24,7 +24,9 @@ const AddToy = () => {
 
         console.log(addToy);
 
-        fetch('http://localhost:5000/addToy', {
+        // 'http://localhost:5000/addToy'
+
+        fetch('https://capable-worm-production.up.railway.app/addToy', {
             method:'POST',
             headers:{
                 'content-type': 'application/json'

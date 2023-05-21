@@ -38,7 +38,7 @@ const router = createBrowserRouter([
         {
             path:'singleToy/:id',
             element: <PrivateRoutes> <SingleToy></SingleToy> </PrivateRoutes>,
-            loader: ({params}) => fetch(`http://localhost:5000/addToy/${params.id}`)
+            loader: ({params}) => fetch(`https://capable-worm-production.up.railway.app/addToy/${params.id}`)
         },
         {
           path:'addToy',
